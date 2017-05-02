@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+
+{% block head_title %}Welcome | {{ block.super }}{% endblock %}
+
+<style>
+{% block style %}
+{% endblock %}
+</style>
+{% block content %}
+
+<div class="container">
+            {% block jumbotron %}
+
+            {% endblock %}
+
+<div class="jumbotron">
+ <div class="container">
+	<div class="row">
+		<p class='col-sm-6 col-sm-offset-3'>
+        <h2><strong>Hi! Welcome to my blog.</strong></h2>
+        <p>I write on real estate and cities, data science and Python programming.
+           Yes, you read it right, after all one has to accept that their interests on such vital subjects as food,
+           photography or basketball are not that keenly shared by fellow web surfers! How does one know?
+           You may wish to ask. Well... <i><b>the data speaks for itself.</b></i> Or does it? Let's try to find out.</p>
+		<p>
+		<a class="btn btn-lg btn-primary" href="{% url 'posts:list' %}" role="button">Read more &raquo;</a>
+		</p>
+		<iframe width="560" height="315" position="center" src="https://www.youtube.com/embed/4Jec_8S4BnE" frameborder="0" allowfullscreen></iframe>
+        </div>
+	</div>
+</div>
+</div>
+
+
+
+
+<h1></h1>
+
+	<h2></h2>
+	<table class='table'>
+
+<div class="row">
+
+
+	<div class='col-sm-3'>
+<p class='lead text-align-center'></p>
+</div>
+
+</div>
+
+{% endblock %}

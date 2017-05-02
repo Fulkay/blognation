@@ -1,0 +1,188 @@
+{% load staticfiles %}
+<!--DOCTYPE html -->
+<html>
+<head>
+<title>{% block head_title %} RS & A {% endblock head_title %}</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' >
+<!-- social buttons icons -->
+
+
+<link rel='stylesheet' href='{% static "css/base.css" %}' />
+<style>
+{% block style %}{% endblock style %}
+</style>
+
+{% block head_extra %} {% endblock head_extra %}
+</head>
+<body>
+
+{%  include 'navbar.html' %}
+
+<div class="container">
+            {% block jumbotron %}
+
+            {% endblock %}
+
+ </div> <!-- /container -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+{% block content %}{% endblock content %}
+
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script   src="http://code.jquery.com/jquery-1.12.2.min.js"   integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk="   crossorigin="anonymous"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js'></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".content-markdown").each(function(){
+            var content = $(this).text()
+            console.log(content)
+            var markedContent = marked(content)
+            console.log(markedContent)
+            $(this).html(markedContent)
+    })
+    $(".content-markdown img").each(function(){
+            $(this).addClass("img-responsive");
+    })
+})
+
+    var contentInput = $("#id_content");
+    function setContent(value){
+        var markedContent = marked(value)
+        $("#preview-content").html(markedContent)
+
+        $("#preview-content img").each(function(){
+            $(this).addClass("img-responsive")
+        })
+    }
+    setContent(contentInput.val())
+    contentInput.keyup(function(){
+        var newContent = $(this).val()
+        setContent(newContent)
+    })
+    var titleInput = $("#id_title");
+
+    function setTitle(value) {
+        $("#preview-title").text(value)
+    }
+    setTitle(titleInput.val())
+    titleInput.keyup(function(){
+        var newContent = $(this).val()
+        setTitle(newContent)
+    })
+    $(".comment-reply-btn").click(function(event){
+        event.preventDefault();
+        $(this).parent().next(".comment-reply").fadeToggle();
+    })
+</script>
+
+
+       <!--<footer class="bd-footer text-muted">
+          <div class="copyrights">
+            <p>&copy;2017 <a href="{% url 'work' %}" target="_blank"> Research, Strategy & Analytics</a></p>
+          </div><!--copyrights -->
+<footer>
+<div id="footer">
+  <div class="container text-center">
+  </div>
+</div>
+</footer>
+
+<!-- Footer Wrapper -->
+				<div id="footer-wrapper">
+					<footer id="footer" class="container text-center">
+						<div class="row">
+							<div class="3u 12u(mobile)">
+
+							</div>
+							<div class="3u 12u(mobile)">
+
+							</div>
+							<div class="6u 12u(mobile)">
+							<div class="container">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{ instance.title }}&summary={{ share_string }}&source={{ request.build_absolute_uri }}" target="blank" class="fa fa-linkedin"></a> | <a href="https://twitter.com/home?status={{ instance.content|truncatechars:80 }}%20{{ request.build_absolute_uri }}" target="blank" class="fa fa-twitter"></a> | <a href="https://plus.google.com/share?url={{ request.build_absolute_uri }}" class="fa fa-google-plus"></a>
+		</div>
+				</div>
+							<div class="6u 12u(mobile)">
+
+								<!-- Contact -->
+									<br>
+								<a type="button" class="btn btn-sm btn-primary" href="{% url 'work' %}" value="Input Button" role="button">Get in touch &raquo;</a>
+									 </br>
+								<div>
+											<div class="row">
+												<div class="6u 12u(mobile)">
+												</div>
+												 <br class="footer">
+
+
+												<div class="6u 12u(mobile)">
+													<dl class="contact">
+														<dt><u>Email:</u></dt>
+														<dd><a href="#">kayiranga@gmail.com</a></dd></br>
+														</dd>
+														<dt><u>Tel:</u></dt>
+														<dd>(44) 07947 197 008</dd>
+													</dl>
+												</div>
+											</div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="12u">
+								<div id="copyright text-center">
+									<ul class="menu">
+										<li><a href="{% url 'work' %}">&copy; Research, Strategy & Analytics</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
+
+
+
