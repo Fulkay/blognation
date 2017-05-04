@@ -17,19 +17,16 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.contrib.auth.views import login, logout
-from posts.views import home, contact, about, work
+
 from accounts.views import (login_view, register_view, logout_view)
 
 urlpatterns = [
     #url(r'^$', 'newsletter.views.home', name='home'),
-    #url(r'^$', 'posts.views.post_list', name='list'),
     url(r'^Home/', 'posts.views.home', name='home'),
     url(r'^contact/', 'posts.views.contact', name='contact'),
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^posts/$', "posts.views.post_home"), #posts is module and post_home
     url(r'^work/', 'posts.views.work', name='work'),
     url(r'^about/', 'posts.views.about', name='about'),
+    url(r'^admin/', admin.site.urls),
     url(r'^comments/', include("comments.urls", namespace='comments')),
     url(r'^register/', register_view, name='register'),
     url(r'^login/', login_view, name='login'),
@@ -38,8 +35,7 @@ urlpatterns = [
     # url(r'^(?P<slug>[\w-]+)/$', home, name='home'),
     # url(r'^posts/$', "<appname>.views.<function_name>"),
     # url(r'^blog/', include('blog.urls')),
-    #url(r'^admin/', include(admin.site.urls)),
-    #url(r'^admin/', admin.site.urls),
+    url(r'^admin/', include(admin.site.urls))
 ]
 
 if settings.DEBUG:
