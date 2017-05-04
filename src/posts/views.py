@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 try:
     from urllib import quote_plus  # python 2
 except:
@@ -21,7 +23,7 @@ from comments.forms import CommentForm
 from comments.models import Comment
 from .forms import PostForm
 from .models import Post
-from __future__ import unicode_literals
+
 
 import copy
 import datetime

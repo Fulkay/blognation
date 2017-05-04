@@ -1,11 +1,11 @@
-
+from __future__ import unicode_literals
 from django import forms
 
 from pagedown.widgets import PagedownWidget
 from django.forms.utils import flatatt
 from .models import Post
 
-from __future__ import unicode_literals
+
 
 import copy
 import datetime
