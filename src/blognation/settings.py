@@ -62,7 +62,7 @@ MIDDLEWARE_CLASSES = [
 ]
 
 LOGIN_URL = "/login/"
-ROOT_URLCONF = 'blog.urls'
+ROOT_URLCONF = 'blognation.urls'
 
 TEMPLATES = [
     {
