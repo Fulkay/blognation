@@ -22,6 +22,7 @@ from accounts.views import (login_view, register_view, logout_view)
 
 urlpatterns = [
     #url(r'^$', 'newsletter.views.home', name='home'),
+    #url(r'^$', 'posts.views.post_list', name='list'),
     url(r'^Home/', 'posts.views.home', name='home'),
     url(r'^contact/', 'posts.views.contact', name='contact'),
     url(r'^work/', 'posts.views.work', name='work'),
@@ -35,7 +36,7 @@ urlpatterns = [
     # url(r'^(?P<slug>[\w-]+)/$', home, name='home'),
     # url(r'^posts/$', "<appname>.views.<function_name>"),
     # url(r'^blog/', include('blog.urls')),
-    url(r'^admin/', include(admin.site.urls))
+    url(r'^admin/', include(admin.site.urls)),
 ]
 
 if settings.DEBUG:

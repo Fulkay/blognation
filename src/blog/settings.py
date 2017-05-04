@@ -10,7 +10,6 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,7 +24,7 @@ SECRET_KEY = 'sm@g)(fbwdh5wc*xe@j++m9rh^uza5se9a57c5ptwkg*b@ki0x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['blognation.herokuapp.com', '*']
+ALLOWED_HOSTS = ['blognation.herokuapp.com','*']
 
 
 # Application definition
@@ -63,12 +62,12 @@ MIDDLEWARE_CLASSES = [
 ]
 
 LOGIN_URL = "/login/"
-ROOT_URLCONF = 'blognation.urls'
+ROOT_URLCONF = 'blog.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(PROJECT_ROOT, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -87,12 +86,20 @@ WSGI_APPLICATION = 'blognation.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
+# Database
+# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME':  os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+          'ENGINE': 'django.db.backends.postgresql_psycopg2',
+          'NAME': 'dcs04aumhhikee',
+          'USER': 'ljyogfvqditawj',
+          'PASSWORD': '76a9eb856dd4dece6e712c567f1e995a3612e3abd285ba2f92d404b792de3545',
+          'HOST': 'ec2-176-34-111-152.eu-west-1.compute.amazonaws.com',
+          'PORT': '5432',
+      }
 }
+
 
 
 # Password validation
@@ -127,7 +134,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
+Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'live-static-files','static-root')
