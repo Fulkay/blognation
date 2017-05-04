@@ -18,7 +18,7 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.auth.views import login, logout
-from posts.views import home, contact, about, work, comments, posts
+from posts.views import home, contact, about, work
 from accounts.views import (login_view, register_view, logout_view)
 
 urlpatterns = [
