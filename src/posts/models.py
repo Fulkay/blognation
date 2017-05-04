@@ -8,7 +8,7 @@ from django.db.models.signals import pre_save
 from django.utils import timezone
 from django.utils.safestring import mark_safe
 from django.utils.text import slugify
-
+from django.forms.utils import flatatt
 
 from markdown_deux import markdown
 from comments.models import Comment

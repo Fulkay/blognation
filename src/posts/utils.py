@@ -3,7 +3,7 @@ import math
 import re
 
 from django.utils.html import strip_tags
-
+from django.forms.utils import flatatt
 
 
 def count_words(html_string):
