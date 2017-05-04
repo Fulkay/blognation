@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3ca56e9-599e-43be-b957-bf7c57e51c9d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/apex-vcs.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/blognation/__init__.py" afterPath="$PROJECT_DIR$/src/blog/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/blognation/settings.py" afterPath="$PROJECT_DIR$/src/blog/settings.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/blognation/urls.py" afterPath="$PROJECT_DIR$/src/blog/urls.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/blognation/wsgi.py" afterPath="$PROJECT_DIR$/src/blog/wsgi.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manage.py" afterPath="$PROJECT_DIR$/src/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/blog/settings.py" afterPath="$PROJECT_DIR$/src/blog/settings.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,6 +34,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/blog/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="154" column="0" lean-forward="true" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/posts/views.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -115,7 +120,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/manage.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
@@ -132,16 +137,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="22">
               <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="runtime.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runtime.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -247,7 +242,6 @@
         <option value="$PROJECT_DIR$/src/keys.py" />
         <option value="$PROJECT_DIR$/src/blog/urls.py" />
         <option value="$PROJECT_DIR$/src/Procfile" />
-        <option value="$PROJECT_DIR$/src/blog/settings.py" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/src/blog/wsgi.py" />
         <option value="$PROJECT_DIR$/src/blognation/settings.py" />
@@ -258,6 +252,7 @@
         <option value="$PROJECT_DIR$/src/posts/apps.py" />
         <option value="$PROJECT_DIR$/src/posts/utils.py" />
         <option value="$PROJECT_DIR$/src/manage.py" />
+        <option value="$PROJECT_DIR$/src/blog/settings.py" />
       </list>
     </option>
   </component>
@@ -905,9 +900,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="217" y="82" width="1590" height="832" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25193298" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25193298" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="711" y="306" width="1083" height="209" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23293768" sideWeight="0.3546241" order="10" side_tool="false" content_ui="tabs" />
@@ -1155,14 +1150,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blog/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1408">
-          <caret line="64" column="26" lean-forward="false" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/accounts/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1302,6 +1289,14 @@
           <folding>
             <element signature="e#22#31#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="154" column="0" lean-forward="true" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
