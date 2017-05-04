@@ -21,7 +21,15 @@ from comments.forms import CommentForm
 from comments.models import Comment
 from .forms import PostForm
 from .models import Post
+from __future__ import unicode_literals
 
+import copy
+import datetime
+import re
+from itertools import chain
+
+from django.conf import settings
+from django.forms.utils import flatatt, to_current_timezone
 
 def post_create(request):
     if not request.user.is_staff or not request.user.is_superuser:
